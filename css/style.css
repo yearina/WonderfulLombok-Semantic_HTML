@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body{ 
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/bg-cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    background-color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+header .nav-container{
+    color: white;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    column-gap: 5rem;
+    padding: 10px 20px; 
+    
+    position: fixed;
+    top: 0; 
+    z-index: 1000; 
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;  
+    padding: 5px;
+}
+
+nav a:hover{
+    background-color: #416788;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.hidden{
+    display: none;
+}
+
+ .quotes{
+    display: flex;
+    justify-content: center; /* Mencentralkan horizontal */
+    align-items: center; /* Mencentralkan vertikal */
+    margin: 0 auto;
+    width: 60%;
+    height: 100vh; /* Menyesuaikan tinggi container */
+}
+
+q{
+    text-align: center;
+    color: white;
+} 
+
+article{
+    padding: 50px 20px;
+    background-color: white; 
+    color: black;  
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-bottom: 50vh;
+}
+
+article h2{
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 5px solid #416788;
+}
+
+
+
+.section-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 50px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin: 15px 0;
+    padding: 15px;
+}
+.section-container img{
+    width: 350px;
+}
+
+.objek{
+    color: #416788;
+    border: 5px groove #416788;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.objek h3{
+    padding-bottom: 10px;
+}
+
+aside{
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color:  rgba(255, 255, 255, 0.5);
+    column-gap: 3rem;
+}
+
+aside img{
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+table tr td, th{
+    padding: 5px 10px;
+    color: black;
+    text-align: left;
+   
+}
+
+th{
+    color: #416788;
+}
+
+
+
+footer{
+    color: white;
+    background-color: #416788;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+  
+
+/* responsive menggunakan media query */
+
+@media screen and (max-width: 1020px){
+    header .nav-container{ 
+        flex-wrap: wrap;
+    }
+
+    aside{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    header .nav-container{ 
+        justify-content: space-evenly;
+        column-gap: 1rem;
+        padding: 5px 0px;
+    }
+
+    header nav ul{
+        flex-flow: row wrap;
+    }
+
+    /* menampilkan tombol */
+    .hidden{
+        display: flex;
+    }
+
+    /* Tombol dropdown */
+    .dropbtn {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        top: 58px; 
+        right: 0px; 
+    }
+
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        color: black;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #416788;
+        color: white;
+    }
+
+    .show {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .section-container{
+        flex-flow: column;
+    }
+    
+    .section-container img{
+        width: 250px;
+    }
+
+    .objek, aside{
+        display: flex;
+        flex-flow: column; 
+        align-items: center;
+    } 
+    
+    aside{
+        width: 75%;
+    }
+
+    footer{
+        padding: 0 20px;
+        height: 15vh;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body{
+        font-size: 14px;
+    }
+    h1{
+        font-size: 26px;
+    }
+}
